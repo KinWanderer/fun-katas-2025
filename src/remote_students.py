@@ -15,5 +15,6 @@ with a value of "remote"."""
 # some strings have location, some don't 
 # return a new LIST with ALL missing locations updated to remote  
 
-def remote_locations():
-    pass 
+def added_remote_location(students):
+    return [{**student, "location": student.get("location", "remote")} for student in students]
+
